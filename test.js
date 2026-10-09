@@ -11,4 +11,6 @@ assert.equal(calculateTotal(500, 0), 0);
 // Test 3: Invalid price
 assert.throws(() => calculateTotal(-100, 2));
 
+console.log("Testing automatic CI");
+
 console.log("All tests passed!");

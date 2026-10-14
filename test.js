@@ -13,5 +13,6 @@ assert.throws(() => calculateTotal(-100, 2));
 
 console.log("Testing automatic CI");
 console.log("added webhook into github for CI");
+console.log("added docker in ci")
 
 console.log("All tests passed!");

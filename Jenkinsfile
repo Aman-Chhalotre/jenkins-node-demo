@@ -3,20 +3,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-
-        stage('Check Node') {
-            steps {
-                bat 'node --version'
-                bat 'call npm --version'
-            }
-        }
-
-        stage('Install Dependencies') {
+        stage('Install') {
             steps {
                 bat 'call npm ci'
             }
@@ -31,6 +18,12 @@ pipeline {
         stage('Build') {
             steps {
                 bat 'call npm run build'
+            }
+        }
+
+        stage('Docker Build') {
+            steps {
+                bat 'docker build -t jenkins-node-demo:%BUILD_NUMBER% .'
             }
         }
     }

@@ -5,7 +5,8 @@
   "description": "Learning Node.js CI with Jenkins",
   "main": "app.js",
   "scripts": {
-    "test": "node test.js",
-    "build": "node --check app.js && node --check test.js"
-  }
+  "test": "node test.js",
+  "build": "node --check app.js && node --check test.js && node --check server.js",
+  "start": "node server.js"
+}
 }

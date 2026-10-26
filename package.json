@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "node test.js",
-    "build": "node api.js && node --check app.js && node --check test.js && node --check server.js",
-    "start": "node api.js && node server.js"
+    "build": "node --check app.js && node --check test.js && node --check server.js",
+    "start": "node server.js"
   }
 }
